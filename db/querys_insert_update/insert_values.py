@@ -1,6 +1,6 @@
-def insert_jogadores(id_jogador, nome_jogador, time_jogador, posicao):
+def insert_jogadores(id_jogador, nome_jogador, time_jogador):
     query = f"""INSERT INTO tb_jogadores
-                VALUES({id_jogador}, '{nome_jogador}', '{time_jogador}');"""
+                VALUES('{id_jogador}', "{nome_jogador}", "{time_jogador}");"""
     return query
 
 def insert_estatisticas(id_jogador, infos):
