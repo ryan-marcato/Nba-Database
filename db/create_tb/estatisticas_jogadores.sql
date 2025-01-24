@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS tb_estatisticas_jogadores (
+    id_jogador VARCHAR(100),
+    jogos_disputados INT,
+    min_por_jogo FLOAT,
+    pontos_por_jogo FLOAT,
+    avg_arremessos_convertidos FLOAT,
+    avg_tentativa_arremessos FLOAT,
+    porcentagem_arremessos_certos FLOAT,
+    avg_arremessos_3pontos_convertidos FLOAT,
+    avg_tentativas_arremessos_3pontos FLOAT,
+    porcentagem_arremessos_3pontos_convertidos FLOAT,
+    avg_lances_livres_convertidos FLOAT,
+    avg_tentativa_lances_livres FLOAT,
+    aproveitamento_lances_livres FLOAT,
+    rebotes_por_jogo FLOAT,
+    assistencia_por_jogo FLOAT,
+    roubos_bola_por_jogo FLOAT,
+    tocos_por_jogo FLOAT,
+    erros_por_jogo FLOAT,
+    duplo_duplo INT,
+    triplo_duplo INT,
+    CONSTRAINT fk_id_jogador FOREIGN KEY (id_jogador) REFERENCES tb_jogadores (id_jogador)
+);
