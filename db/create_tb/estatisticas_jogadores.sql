@@ -1,4 +1,5 @@
 CREATE TABLE IF NOT EXISTS tb_estatisticas_jogadores (
+    posicao VARCHAR(2),
     id_jogador VARCHAR(100),
     jogos_disputados INT,
     min_por_jogo FLOAT,
