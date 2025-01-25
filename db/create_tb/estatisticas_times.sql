@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS tb_estatisticas_times (
+    id_time VARCHAR(100) PRIMARY KEY,
+    jogos_diputados INT,
+    pontos_por_jogo FLOAT,
+    avg_arremessos_convertidos FLOAT,
+    avg_tentativas_arremesos FLOAT,
+    porcetagem_arremessos_certos  FLOAT,
+    avg_arremessos_3pontos_convertidos FLOAT,
+    avg_tentativas_arremessos_3pontos FLOAT,
+    porcentagem_3pontos FLOAT,
+    avg_lances_livres_convertidos FLOAT,
+    avg_tentativas_lances_livres FLOAT,
+    aproveitamento_lance_livre FLOAT,
+    rebotes_ofensivos_por_jogo FLOAT,
+    rebotes_defensivos_por_jogo FLOAT,
+    rebotes_por_jogo FLOAT,
+    assistencia_por_jogo fLOAT,
+    roubos_de_bola_por_jogo FLOAT,
+    tocos_por_jogo FLOAT,
+    erros_por_jogo FLOAT,
+    faltas_por_jogo FLOAT,
+    CONSTRAINT fk_id_time FOREIGN KEY (id_time) REFERENCES tb_times (id_time)
+)
