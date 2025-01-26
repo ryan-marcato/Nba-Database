@@ -3,7 +3,12 @@ def insert_jogadores(id_jogador, nome_jogador, time_jogador):
                 VALUES('{id_jogador}', "{nome_jogador}", "{time_jogador}");"""
     return query
 
-def insert_estatisticas(id_jogador, infos):
+def insert_times(id_time, nome_time, sigla_time):
+    query = f"""INSERT INTO tb_times
+                VALUES('{id_time}', "{nome_time}", "{sigla_time}");"""
+    return query
+
+def insert_estatisticas_jogadores(id_jogador, infos):
     posicao = infos[0]
     jogos_disputados = int(infos[1])
     min_por_jogo = float(infos[2])
@@ -31,6 +36,36 @@ def insert_estatisticas(id_jogador, infos):
                       {avg_tentativas_arremessos_3pontos}, {porcentagem_arremessos_3pontos_convertidos}, {avg_lances_livres_convertidos},
                       {avg_tentativa_lances_livres}, {aproveitamento_lances_livres}, {rebotes_por_jogo},
                       {assistencia_por_jogo}, {roubos_bola_por_jogo}, {tocos_por_jogo},
-                      {erros_por_jogo}, {duplo_duplo}, {triplo_duplo});"""
+                      {erros_por_jogo}, {duplo_duplo}, {triplo_duplo});"""    
+    return query
+
+def insert_estatisticas_times(id_time, infos):
+    jogos_diputados = infos[0]
+    pontos_por_jogo = infos[1]
+    avg_arremessos_convertidos = infos[2]
+    avg_tentativas_arremesos = infos[3]
+    porcetagem_arremessos_certos = infos[4]
+    avg_arremessos_3pontos_convertidos = infos[5]
+    avg_tentativas_arremessos_3pontos =  infos[6]
+    porcentagem_3pontos = infos[7]
+    avg_lances_livres_convertidos =  infos[8]
+    avg_tentativas_lances_livres = infos[9]
+    aproveitamento_lance_livre = infos[10]
+    rebotes_ofensivos_por_jogo = infos[11]
+    rebotes_defensivos_por_jogo = infos[12]
+    rebotes_por_jogo = infos[13]
+    assistencia_por_jogo = infos[14]
+    roubos_de_bola_por_jogo = infos[15]
+    tocos_por_jogo = infos[16]
+    erros_por_jogo = infos[17]
+    faltas_por_jogo = infos[18]
     
+    query  = f"""INSERT INTO tb_estatisticas_times
+                 VALUES('{id_time}', {jogos_diputados}, {pontos_por_jogo},
+                        {avg_arremessos_convertidos}, {avg_tentativas_arremesos}, {porcetagem_arremessos_certos},
+                        {avg_arremessos_3pontos_convertidos}, {avg_tentativas_arremessos_3pontos}, {porcentagem_3pontos},
+                        {avg_lances_livres_convertidos}, {avg_tentativas_lances_livres}, {aproveitamento_lance_livre},
+                        {rebotes_ofensivos_por_jogo}, {rebotes_defensivos_por_jogo}, {rebotes_por_jogo},
+                        {assistencia_por_jogo}, {roubos_de_bola_por_jogo}, {tocos_por_jogo},
+                        {erros_por_jogo}, {faltas_por_jogo});"""
     return query
