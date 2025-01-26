@@ -2,7 +2,7 @@ import scrapy
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
-from utils.hash.create_hash import hash
+from utils.hash.create_hash import hash_jogadores
 from db.querys_insert_update.insert_values import insert_jogadores
 from utils.db_utils.execute_query import query_insert_execute
 import time
@@ -39,7 +39,7 @@ class JogadoresSpider(scrapy.Spider):
         
         for row in rows_jogador:
             try:
-                id_ = hash(i)
+                id_ = hash_jogadores(i)
                 nome_jogador = row.find_element(By.CSS_SELECTOR, 'a.AnchorLink').text
                 time_jogador = row.find_element(By.CSS_SELECTOR, 'span.pl2.ns10.athleteCell__teamAbbrev').text
                     

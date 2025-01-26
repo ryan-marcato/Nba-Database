@@ -2,7 +2,7 @@ import scrapy
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
-from utils.hash.create_hash import hash
+from utils.hash.create_hash import hash_jogadores
 from db.querys_insert_update.insert_values import insert_estatisticas_jogadores
 from utils.db_utils.execute_query import query_insert_execute
 import time
@@ -40,7 +40,7 @@ class EstatisticasSpider(scrapy.Spider):
         
         for row in rows_estatiticas:
             try:
-                id_ = hash(i)
+                id_ = hash_jogadores(i)
                 estatisticas = [td.text for td in row.find_elements(By.CSS_SELECTOR, 'td.Table__TD')]
                 
                 query = insert_estatisticas_jogadores(id_, estatisticas)
