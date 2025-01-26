@@ -1,4 +1,4 @@
-def hash(numero):
+def hash_jogadores(numero):
     numeros_hash = []
     numero_hash1 = numero * 10 * 2
     numero_hash2 = numero * 20 * 4
