@@ -1,11 +1,11 @@
 def insert_jogadores(id_jogador, nome_jogador, time_jogador):
     query = f"""INSERT INTO tb_jogadores
-                VALUES('{id_jogador}', "{nome_jogador}", "{time_jogador}");"""
+                VALUES('{id_jogador}', "{nome_jogador}", "{time_jogador}")"""
     return query
 
 def insert_times(id_time, nome_time, sigla_time):
     query = f"""INSERT INTO tb_times
-                VALUES('{id_time}', "{nome_time}", "{sigla_time}");"""
+                VALUES('{id_time}', "{nome_time}", "{sigla_time}")"""
     return query
 
 def insert_estatisticas_jogadores(id_jogador, infos):
@@ -36,7 +36,7 @@ def insert_estatisticas_jogadores(id_jogador, infos):
                       {avg_tentativas_arremessos_3pontos}, {porcentagem_arremessos_3pontos_convertidos}, {avg_lances_livres_convertidos},
                       {avg_tentativa_lances_livres}, {aproveitamento_lances_livres}, {rebotes_por_jogo},
                       {assistencia_por_jogo}, {roubos_bola_por_jogo}, {tocos_por_jogo},
-                      {erros_por_jogo}, {duplo_duplo}, {triplo_duplo});"""    
+                      {erros_por_jogo}, {duplo_duplo}, {triplo_duplo})"""    
     return query
 
 def insert_estatisticas_times(id_time, infos):
@@ -67,5 +67,5 @@ def insert_estatisticas_times(id_time, infos):
                         {avg_lances_livres_convertidos}, {avg_tentativas_lances_livres}, {aproveitamento_lance_livre},
                         {rebotes_ofensivos_por_jogo}, {rebotes_defensivos_por_jogo}, {rebotes_por_jogo},
                         {assistencia_por_jogo}, {roubos_de_bola_por_jogo}, {tocos_por_jogo},
-                        {erros_por_jogo}, {faltas_por_jogo});"""
+                        {erros_por_jogo}, {faltas_por_jogo})"""
     return query
