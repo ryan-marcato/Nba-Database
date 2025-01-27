@@ -1,2 +1,2 @@
 # Nba-Database
-Criação de uma ETL da nba.
+extracao e armazenato de dados da nba.
