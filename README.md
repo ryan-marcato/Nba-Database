@@ -1,2 +1,2 @@
 # Nba-Database
-Coleta de jogadores da nba e armazenamento em banco de dados.
+Criação de uma ETL da nba.
