@@ -1,4 +1,8 @@
 def insert_jogadores(id_jogador, nome_jogador, time_jogador):
+    if time_jogador is None:
+        query = f"""INSERT INTO tb_jogadores
+                VALUES('{id_jogador}', "{nome_jogador}", NULL)"""
+    
     query = f"""INSERT INTO tb_jogadores
                 VALUES('{id_jogador}', "{nome_jogador}", "{time_jogador}")"""
     return query
