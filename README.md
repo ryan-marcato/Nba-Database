@@ -1,2 +1,2 @@
 # Nba-Database
-extracao e armazenato de dados da nba.
+Webscraping e armazenamento de dados da nba. 
