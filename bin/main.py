@@ -1,0 +1,11 @@
+from bin.exec_create_table import cria_tabelas
+from extractionTimes.extractionTimes.spiders.extraction_times import coleta_times
+from extractionTimes.extractionTimes.spiders.extraction_estatisticas_times import coleta_estatisticas_times
+from extractionJogadores.extractionJogadores.spiders.insert_crawl_process import coleta_jogadores
+from extractionJogadores.extractionJogadores.spiders.insert_crawl_process import coleta_estatisticas_jogadores
+
+#cria_tabelas()
+#coleta_times()
+#coleta_estatisticas_times()
+#coleta_jogadores()
+coleta_estatisticas_jogadores()
