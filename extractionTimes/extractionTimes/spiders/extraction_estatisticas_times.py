@@ -25,7 +25,7 @@ class TimeEstatisticasSpider:
     def close(self):
         self.driver.quit()
         
-if __name__ == "__main__":
+def coleta_estatisticas_times():
     spider = TimeEstatisticasSpider()
     try:
         spider.parse("https://www.espn.com.br/nba/estatisticas/time")

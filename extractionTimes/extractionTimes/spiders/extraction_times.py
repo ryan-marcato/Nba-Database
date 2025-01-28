@@ -46,7 +46,7 @@ class TimesSpider:
         driver.get(url)
 
         dados = [time.text for time in driver.find_elements(By.CSS_SELECTOR, 'a.AnchorLink')]
-        resultado = [item for item in dados[13:72] if item != '']
+        resultado = [item for item in dados[37:97] if item != '']
 
         for i, time in enumerate(resultado):
             id_ = hash_times(i)
@@ -61,8 +61,7 @@ class TimesSpider:
         self.driver.quit()
 
 
-# Execução do script usando CrawlProcesses
-if __name__ == "__main__":
+def coleta_times():
     spider = TimesSpider()
     try:
         spider.parse("https://www.espn.com.br/nba/estatisticas/time")
