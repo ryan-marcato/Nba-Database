@@ -1,2 +1,2 @@
 # Nba-Database
-Coleta de jogadores da nba e armazenamento em banco de dados.
+Webscraping e armazenamento de dados da nba. 
