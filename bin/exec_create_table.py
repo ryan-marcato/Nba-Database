@@ -8,8 +8,9 @@ query04 = load_query('db/create_tb/estatisticas_jogadores.sql')
 
 if query01 is None or query02 is None or query03 is None or query04 is None:
     print("Erro ao ler as querys")
-    
-query_execute_tb(query01)
-query_execute_tb(query02)
-query_execute_tb(query03)
-query_execute_tb(query04)
+
+def cria_tabelas():    
+    query_execute_tb(query01)
+    query_execute_tb(query02)
+    query_execute_tb(query03)
+    query_execute_tb(query04)
